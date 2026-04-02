@@ -1,0 +1,125 @@
+2026-04-01 19:55:33 | BOOKING_CREATED | BK-DDF1ED50 for room 221 guest Aditya
+2026-04-01 19:56:56 | CHECK_OUT | BK-DDF1ED50 checked out from room 221
+2026-04-01 19:57:10 | ROOM_STATUS | 102 changed to AVAILABLE
+2026-04-01 19:57:48 | BILL_PAID | BL-7A6CDBDB paid by UPI
+2026-04-01 19:58:02 | REPORT_EXPORTED | data\reports\hotel-report-20260401-195802.txt
+2026-04-01 19:58:32 | BACKUP_CREATED | data\backups\hotel-backup-20260401-195832.ser
+2026-04-01 20:12:25 | SERVICE | Started: Room Cleaning for room 201
+2026-04-01 20:12:30 | SERVICE | Completed: Room Cleaning for room 201
+2026-04-01 20:24:12 | SERVICE | Food Delivery | PENDING | room 201 | Request received
+2026-04-01 20:24:12 | SERVICE | Food Delivery | IN_PROGRESS | room 201 | Request received
+2026-04-01 20:24:13 | SERVICE | Food Delivery | IN_PROGRESS | room 201 | Food is being prepared
+2026-04-01 20:24:15 | SERVICE | Food Delivery | IN_PROGRESS | room 201 | Sent to room
+2026-04-01 20:24:17 | SERVICE | Food Delivery | IN_PROGRESS | room 201 | Received by customer
+2026-04-01 20:24:18 | SERVICE | Food Delivery | COMPLETED | room 201 | Completed
+2026-04-01 20:24:36 | SERVICE | Food Delivery | PENDING | room 221 | Request received
+2026-04-01 20:24:36 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Request received
+2026-04-01 20:24:37 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Food is being prepared
+2026-04-01 20:24:39 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Sent to room
+2026-04-01 20:24:41 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Received by customer
+2026-04-01 20:24:42 | SERVICE | Food Delivery | COMPLETED | room 221 | Completed
+2026-04-01 21:15:17 | BOOKING_CREATED | BK-88EB0D5D for room 102 guest Nihal B M
+2026-04-01 21:30:08 | ROOM_STATUS | 201 changed to MAINTENANCE
+2026-04-01 21:30:08 | SERVICE | Maintenance | PENDING | room 201 | Queued for maintenance
+2026-04-01 21:30:08 | SERVICE | Maintenance | IN_PROGRESS | room 201 | Queued for maintenance
+2026-04-01 21:30:11 | SERVICE | Maintenance | IN_PROGRESS | room 201 | Maintenance in process
+2026-04-01 21:30:14 | SERVICE | Maintenance | COMPLETED | room 201 | Completed
+2026-04-01 21:32:28 | SERVICE | Laundry Pickup | PENDING | room 102 | Request received
+2026-04-01 21:32:28 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Request received
+2026-04-01 21:32:29 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent to laundry
+2026-04-01 21:32:30 | SERVICE | Laundry Pickup | PENDING | room 102 | Request received
+2026-04-01 21:32:30 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Request received
+2026-04-01 21:32:31 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Laundry in process
+2026-04-01 21:32:32 | SERVICE | Laundry Pickup | PENDING | room 102 | Request received
+2026-04-01 21:32:32 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Request received
+2026-04-01 21:32:32 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent to laundry
+2026-04-01 21:32:33 | SERVICE | Laundry Pickup | PENDING | room 102 | Request received
+2026-04-01 21:32:33 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent back to room
+2026-04-01 21:32:33 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent to laundry
+2026-04-01 21:32:34 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Laundry in process
+2026-04-01 21:32:34 | SERVICE | Laundry Pickup | PENDING | room 102 | Request received
+2026-04-01 21:32:35 | SERVICE | Laundry Pickup | COMPLETED | room 102 | Completed
+2026-04-01 21:32:35 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Request received
+2026-04-01 21:32:35 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Laundry in process
+2026-04-01 21:32:35 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent back to room
+2026-04-01 21:32:37 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent to laundry
+2026-04-01 21:32:37 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent back to room
+2026-04-01 21:32:37 | SERVICE | Laundry Pickup | COMPLETED | room 102 | Completed
+2026-04-01 21:32:37 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Request received
+2026-04-01 21:32:38 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Laundry in process
+2026-04-01 21:32:39 | SERVICE | Laundry Pickup | COMPLETED | room 102 | Completed
+2026-04-01 21:32:39 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent to laundry
+2026-04-01 21:32:40 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent back to room
+2026-04-01 21:32:41 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Laundry in process
+2026-04-01 21:32:42 | SERVICE | Laundry Pickup | COMPLETED | room 102 | Completed
+2026-04-01 21:32:43 | SERVICE | Laundry Pickup | IN_PROGRESS | room 102 | Sent back to room
+2026-04-01 21:32:44 | SERVICE | Laundry Pickup | COMPLETED | room 102 | Completed
+2026-04-01 22:18:34 | BOOKING_CREATED | BK-7BC39F8C for room 202 guest Praveen
+2026-04-01 23:15:19 | REPORT_EXPORTED | data\reports\hotel-report-20260401-231519.txt
+2026-04-01 23:18:02 | CHECK_OUT | BK-8ACD23D3 checked out from room 201
+2026-04-01 23:18:26 | CHECK_OUT | BK-88EB0D5D checked out from room 102
+2026-04-01 23:40:28 | SERVICE | Food Delivery | PENDING | room 221 | Request received
+2026-04-01 23:40:28 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Request received
+2026-04-01 23:40:30 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Food is being prepared
+2026-04-01 23:40:31 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Sent to room
+2026-04-01 23:40:33 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Received by customer
+2026-04-01 23:40:35 | SERVICE | Food Delivery | COMPLETED | room 221 | Completed
+2026-04-01 23:40:53 | REPORT_EXPORTED | data\reports\hotel-report-20260401-234053.txt
+2026-04-01 23:42:59 | SERVICE | Food Delivery | PENDING | room 221 | Request received
+2026-04-01 23:42:59 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Request received
+2026-04-01 23:43:00 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Food is being prepared
+2026-04-01 23:43:02 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Sent to room
+2026-04-01 23:43:03 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Received by customer
+2026-04-01 23:43:05 | SERVICE | Food Delivery | COMPLETED | room 221 | Completed
+2026-04-02 00:02:19 | SERVICE | Food Delivery | PENDING | room 221 | Request received
+2026-04-02 00:02:19 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Request received
+2026-04-02 00:02:20 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Food is being prepared
+2026-04-02 00:02:22 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Sent to room
+2026-04-02 00:02:24 | SERVICE | Food Delivery | IN_PROGRESS | room 221 | Received by customer
+2026-04-02 00:02:25 | SERVICE | Food Delivery | COMPLETED | room 221 | Completed
+2026-04-02 00:18:26 | SERVICE | Laundry Pickup | PENDING | room 221 | Request received
+2026-04-02 00:18:26 | SERVICE | Laundry Pickup | IN_PROGRESS | room 221 | Request received
+2026-04-02 00:18:28 | SERVICE | Laundry Pickup | IN_PROGRESS | room 221 | Sent to laundry
+2026-04-02 00:18:30 | SERVICE | Laundry Pickup | IN_PROGRESS | room 221 | Laundry in process
+2026-04-02 00:18:32 | SERVICE | Laundry Pickup | IN_PROGRESS | room 221 | Sent back to room
+2026-04-02 00:18:33 | SERVICE | Laundry Pickup | COMPLETED | room 221 | Completed
+2026-04-02 00:19:57 | ROOM_STATUS | 202 changed to MAINTENANCE
+2026-04-02 00:19:57 | SERVICE | Maintenance | PENDING | room 202 | Queued for maintenance
+2026-04-02 00:19:57 | SERVICE | Maintenance | IN_PROGRESS | room 202 | Queued for maintenance
+2026-04-02 00:20:00 | SERVICE | Maintenance | IN_PROGRESS | room 202 | Maintenance in process
+2026-04-02 00:20:03 | SERVICE | Maintenance | COMPLETED | room 202 | Completed
+2026-04-02 00:20:03 | ROOM_STATUS | 202 auto-restored to AVAILABLE after maintenance
+2026-04-02 00:34:50 | SERVICE | Food Delivery | PENDING | booking BK-DDF1ED50 | room 221 | Request received
+2026-04-02 00:34:50 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-DDF1ED50 | room 221 | Request received
+2026-04-02 00:34:52 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-DDF1ED50 | room 221 | Food is being prepared
+2026-04-02 00:34:54 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-DDF1ED50 | room 221 | Sent to room
+2026-04-02 00:34:55 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-DDF1ED50 | room 221 | Received by customer
+2026-04-02 00:34:57 | SERVICE | Food Delivery | COMPLETED | booking BK-DDF1ED50 | room 221 | Completed
+2026-04-02 13:33:40 | SERVICE | Food Delivery | PENDING | booking BK-8ACD23D3 | room 201 | Request received
+2026-04-02 13:33:40 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Request received
+2026-04-02 13:33:42 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Food is being prepared
+2026-04-02 13:33:45 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Sent to room
+2026-04-02 13:33:47 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Received by customer
+2026-04-02 13:33:49 | SERVICE | Food Delivery | COMPLETED | booking BK-8ACD23D3 | room 201 | Completed
+2026-04-02 13:33:56 | ROOM_STATUS | 202 changed to MAINTENANCE
+2026-04-02 13:33:56 | SERVICE | Maintenance | PENDING | room 202 | Queued for maintenance
+2026-04-02 13:33:56 | SERVICE | Maintenance | IN_PROGRESS | room 202 | Queued for maintenance
+2026-04-02 13:34:00 | SERVICE | Maintenance | IN_PROGRESS | room 202 | Maintenance in process
+2026-04-02 13:34:04 | SERVICE | Maintenance | COMPLETED | room 202 | Completed
+2026-04-02 13:34:04 | ROOM_STATUS | 202 auto-restored to AVAILABLE after maintenance
+2026-04-02 13:34:18 | REPORT_EXPORTED | data\reports\hotel-report-02-04-2026.txt
+2026-04-02 13:34:23 | REPORT_EXPORTED | data\reports\hotel-report-02-04-2026.txt
+2026-04-02 14:26:39 | ROOM_STATUS | 102 changed to MAINTENANCE
+2026-04-02 14:26:39 | SERVICE | Maintenance | PENDING | room 102 | Queued for maintenance
+2026-04-02 14:26:39 | SERVICE | Maintenance | IN_PROGRESS | room 102 | Queued for maintenance
+2026-04-02 14:26:43 | SERVICE | Maintenance | IN_PROGRESS | room 102 | Maintenance in process
+2026-04-02 14:26:48 | SERVICE | Maintenance | COMPLETED | room 102 | Completed
+2026-04-02 14:26:48 | ROOM_STATUS | 102 auto-restored to AVAILABLE after maintenance
+2026-04-02 14:27:53 | CHECK_OUT | BK-DDF1ED50 checked out from room 221
+2026-04-02 14:29:25 | SERVICE | Food Delivery | PENDING | booking BK-8ACD23D3 | room 201 | Request received
+2026-04-02 14:29:25 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Request received
+2026-04-02 14:29:28 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Food is being prepared
+2026-04-02 14:29:30 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Sent to room
+2026-04-02 14:29:32 | SERVICE | Food Delivery | IN_PROGRESS | booking BK-8ACD23D3 | room 201 | Received by customer
+2026-04-02 14:29:35 | SERVICE | Food Delivery | COMPLETED | booking BK-8ACD23D3 | room 201 | Completed
+2026-04-02 14:29:45 | REPORT_EXPORTED | data\reports\hotel-report-02-04-2026.txt
