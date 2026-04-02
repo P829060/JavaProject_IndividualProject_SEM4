@@ -1,0 +1,156 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-base: #f5f7fb;
+}
+
+.login-root {
+    -fx-background-color: linear-gradient(to right, #f6efe7 0%, #fdfaf5 50%, #eef5fb 100%);
+}
+
+.brand-panel {
+    -fx-background-color: linear-gradient(to bottom right, #17324d 0%, #295b73 60%, #4e8b8f 100%);
+}
+
+.login-card,
+.form-card,
+.stat-card,
+.content-card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #dde7f0;
+    -fx-effect: dropshadow(gaussian, rgba(15, 45, 64, 0.08), 18, 0.2, 0, 6);
+}
+
+.login-card {
+    -fx-padding: 14;
+}
+
+.form-card {
+    -fx-padding: 18 18 18 18;
+}
+
+.content-card {
+    -fx-padding: 18 18 18 18;
+}
+
+.eyebrow {
+    -fx-text-fill: #d9ecf6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.hero-title {
+    -fx-text-fill: white;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+}
+
+.hero-copy,
+.login-tip {
+    -fx-text-fill: rgba(255, 255, 255, 0.84);
+    -fx-font-size: 14px;
+}
+
+.section-title {
+    -fx-text-fill: #14324a;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+}
+
+.primary-button {
+    -fx-background-color: #1f7a8c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+}
+
+.primary-button:hover {
+    -fx-background-color: #166476;
+}
+
+.error-label {
+    -fx-text-fill: #bb1f3c;
+}
+
+.app-shell {
+    -fx-background-color: linear-gradient(to bottom, #eff5f7 0%, #f7f6f2 100%);
+}
+
+.header-bar {
+    -fx-background-color: linear-gradient(to right, #17324d, #28566b);
+}
+
+.page-title {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.muted-label {
+    -fx-text-fill: #5b7184;
+    -fx-font-size: 12px;
+}
+
+.date-chip {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.stat-card {
+    -fx-padding: 16 18 16 18;
+    -fx-pref-width: 210;
+}
+
+.accent-green {
+    -fx-border-color: #9fd3b3;
+}
+
+.accent-blue {
+    -fx-border-color: #8fc1e3;
+}
+
+.accent-amber {
+    -fx-border-color: #f3c178;
+}
+
+.accent-rose {
+    -fx-border-color: #e6a7a7;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #17324d;
+}
+
+.table-view {
+    -fx-background-radius: 14;
+    -fx-border-color: #d8e0e8;
+    -fx-border-radius: 14;
+}
+
+.text-field,
+.password-field,
+.combo-box,
+.date-picker,
+.text-area {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d0dae4;
+    -fx-padding: 9 10 9 10;
+}
+
+.form-card .separator {
+    -fx-padding: 4 0 4 0;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-radius: 10 10 0 0;
+    -fx-padding: 8 16 8 16;
+}

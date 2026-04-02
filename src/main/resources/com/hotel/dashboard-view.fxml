@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="760.0" prefWidth="1200.0" styleClass="app-shell"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.hotel.controller.DashboardController">
+    <top>
+        <VBox spacing="0.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="header-bar">
+                    <padding>
+                        <Insets bottom="18.0" left="20.0" right="20.0" top="18.0"/>
+                    </padding>
+                    <children>
+                        <VBox spacing="4.0">
+                            <children>
+                                <Label styleClass="eyebrow" text="Hotel Overview"/>
+                                <Label styleClass="page-title" text="Reception and Billing Dashboard"/>
+                            </children>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <VBox alignment="CENTER_RIGHT" spacing="4.0">
+                            <children>
+                                <Label styleClass="muted-label" text="Today"/>
+                                <Label fx:id="todayLabel" styleClass="date-chip"/>
+                                <Button onAction="#handleLogout" text="Logout"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="18.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <children>
+                <HBox spacing="14.0">
+                    <children>
+                        <VBox prefHeight="104.0" prefWidth="210.0" spacing="6.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: #dde7f0; -fx-effect: dropshadow(gaussian, rgba(15, 45, 64, 0.08), 18, 0.2, 0, 6); -fx-padding: 16 18 16 18;">
+                            <children>
+                                <Label styleClass="muted-label" text="Total Rooms"/>
+                                <Label fx:id="totalRoomsLabel" styleClass="stat-value" text="0"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="104.0" prefWidth="210.0" spacing="6.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: #9fd3b3; -fx-effect: dropshadow(gaussian, rgba(15, 45, 64, 0.08), 18, 0.2, 0, 6); -fx-padding: 16 18 16 18;">
+                            <children>
+                                <Label styleClass="muted-label" text="Available Rooms"/>
+                                <Label fx:id="availableRoomsLabel" styleClass="stat-value" text="0"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="104.0" prefWidth="210.0" spacing="6.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: #8fc1e3; -fx-effect: dropshadow(gaussian, rgba(15, 45, 64, 0.08), 18, 0.2, 0, 6); -fx-padding: 16 18 16 18;">
+                            <children>
+                                <Label styleClass="muted-label" text="Active Bookings"/>
+                                <Label fx:id="activeBookingsLabel" styleClass="stat-value" text="0"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="104.0" prefWidth="210.0" spacing="6.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: #f3c178; -fx-effect: dropshadow(gaussian, rgba(15, 45, 64, 0.08), 18, 0.2, 0, 6); -fx-padding: 16 18 16 18;">
+                            <children>
+                                <Label styleClass="muted-label" text="Collected Revenue"/>
+                                <Label fx:id="collectedRevenueLabel" styleClass="stat-value" text="Rs. 0.00"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="104.0" prefWidth="210.0" spacing="6.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: #e6a7a7; -fx-effect: dropshadow(gaussian, rgba(15, 45, 64, 0.08), 18, 0.2, 0, 6); -fx-padding: 16 18 16 18;">
+                            <children>
+                                <Label styleClass="muted-label" text="Pending Revenue"/>
+                                <Label fx:id="pendingRevenueLabel" styleClass="stat-value" text="Rs. 0.00"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                    <tabs>
+                        <Tab text="Rooms">
+                            <content>
+                                <HBox alignment="TOP_LEFT" spacing="18.0">
+                                    <children>
+                                        <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <VBox spacing="12.0" styleClass="content-card" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Label styleClass="section-title" text="Room Inventory"/>
+                                                        <TableView fx:id="roomTable" prefHeight="470.0" VBox.vgrow="ALWAYS">
+                                                            <columns>
+                                                                <TableColumn fx:id="roomNumberColumn" prefWidth="120.0" text="Room"/>
+                                                                <TableColumn fx:id="roomTypeColumn" prefWidth="140.0" text="Type"/>
+                                                                <TableColumn fx:id="roomPriceColumn" prefWidth="140.0" text="Price/Night"/>
+                                                                <TableColumn fx:id="roomStatusColumn" prefWidth="160.0" text="Status"/>
+                                                            </columns>
+                                                        </TableView>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="TOP_LEFT" fillWidth="true" minWidth="300.0" prefWidth="320.0" spacing="12.0" styleClass="form-card">
+                                            <children>
+                                                <Label styleClass="section-title" text="Add or Update Room"/>
+                                                <TextField fx:id="roomNumberField" maxWidth="1.7976931348623157E308" promptText="Room number"/>
+                                                <ComboBox fx:id="roomTypeField" maxWidth="1.7976931348623157E308" promptText="Room type"/>
+                                                <TextField fx:id="roomPriceField" maxWidth="1.7976931348623157E308" promptText="Price per night"/>
+                                                <Label styleClass="muted-label" text="New rooms are added as AVAILABLE by default." wrapText="true"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleAddRoom" styleClass="primary-button" text="Add Room"/>
+                                                <Separator/>
+                                                <Label styleClass="muted-label" text="Occupied rooms must be checked out before they become available again." wrapText="true"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleSetMaintenance" text="Send Selected Room to Maintenance"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Bookings">
+                            <content>
+                                <HBox alignment="TOP_LEFT" fillHeight="true" spacing="18.0">
+                                    <children>
+                                        <VBox fillWidth="true" spacing="12.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <VBox fillWidth="true" prefHeight="640.0" spacing="12.0" styleClass="content-card" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Label styleClass="section-title" text="Bookings"/>
+                                                        <Label styleClass="muted-label" text="View all bookings here or combine filters to narrow the list by ID, guest, phone, room, dates, and status." wrapText="true"/>
+                                                        <GridPane hgap="10.0" vgap="10.0">
+                                                            <children>
+                                                                <TextField fx:id="bookingSearchIdField" maxWidth="1.7976931348623157E308" promptText="Booking ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="bookingSearchGuestField" maxWidth="1.7976931348623157E308" promptText="Guest name" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="bookingSearchPhoneField" maxWidth="1.7976931348623157E308" promptText="Phone" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="bookingSearchRoomField" maxWidth="1.7976931348623157E308" promptText="Room" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                                                <DatePicker fx:id="bookingSearchStartDateField" maxWidth="1.7976931348623157E308" promptText="Start date" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                                <DatePicker fx:id="bookingSearchEndDateField" maxWidth="1.7976931348623157E308" promptText="End date" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                                                <ComboBox fx:id="bookingSearchStatusField" maxWidth="1.7976931348623157E308" promptText="Status" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                                                <Button onAction="#handleSearchBookings" styleClass="primary-button" text="Apply Filters" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                                                <Button onAction="#handleClearBookingSearch" text="Clear Filters" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                                                            </children>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="ALWAYS"/>
+                                                                <ColumnConstraints hgrow="ALWAYS"/>
+                                                                <ColumnConstraints hgrow="ALWAYS"/>
+                                                            </columnConstraints>
+                                                        </GridPane>
+                                                        <TableView fx:id="bookingTable" prefHeight="250.0" VBox.vgrow="ALWAYS">
+                                                            <columns>
+                                                                <TableColumn fx:id="bookingIdColumn" prefWidth="130.0" text="Booking ID"/>
+                                                                <TableColumn fx:id="guestNameColumn" prefWidth="140.0" text="Guest"/>
+                                                                <TableColumn fx:id="guestPhoneColumn" prefWidth="120.0" text="Phone"/>
+                                                                <TableColumn fx:id="bookingRoomColumn" prefWidth="80.0" text="Room"/>
+                                                                <TableColumn fx:id="checkInColumn" prefWidth="100.0" text="Check In"/>
+                                                                <TableColumn fx:id="checkOutColumn" prefWidth="100.0" text="Check Out"/>
+                                                                <TableColumn fx:id="bookingStatusColumn" prefWidth="110.0" text="Status"/>
+                                                                <TableColumn fx:id="bookingAmountColumn" prefWidth="120.0" text="Amount"/>
+                                                            </columns>
+                                                        </TableView>
+                                                        <HBox alignment="CENTER_LEFT" minHeight="44.0" prefHeight="44.0" spacing="10.0">
+                                                            <children>
+                                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleViewBookingDetails" text="View Selected Booking Details" HBox.hgrow="ALWAYS"/>
+                                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleCheckOut" styleClass="primary-button" text="Check Out Selected Guest" HBox.hgrow="ALWAYS"/>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="TOP_LEFT" fillWidth="true" minWidth="320.0" prefHeight="640.0" prefWidth="360.0" spacing="10.0" styleClass="form-card">
+                                            <children>
+                                                <Label styleClass="section-title" text="Create Booking"/>
+                                                <TextField fx:id="guestNameField" maxWidth="1.7976931348623157E308" promptText="Guest name"/>
+                                                <TextField fx:id="guestPhoneField" maxWidth="1.7976931348623157E308" promptText="Phone number"/>
+                                                <TextField fx:id="guestEmailField" maxWidth="1.7976931348623157E308" promptText="Email address"/>
+                                                <TextField fx:id="guestIdField" maxWidth="1.7976931348623157E308" promptText="ID proof / Aadhaar / Passport"/>
+                                                <ComboBox fx:id="bookingRoomField" maxWidth="1.7976931348623157E308" promptText="Available room"/>
+                                                <DatePicker fx:id="checkInField" maxWidth="1.7976931348623157E308" promptText="Start date"/>
+                                                <DatePicker fx:id="checkOutField" maxWidth="1.7976931348623157E308" promptText="End date"/>
+                                                <TextField fx:id="serviceChargeField" maxWidth="1.7976931348623157E308" promptText="Extra service charge (optional)"/>
+                                                <TextArea fx:id="bookingNotesField" maxWidth="1.7976931348623157E308" prefRowCount="2" promptText="Notes for stay, amenities, requests"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleCreateBooking" styleClass="primary-button" text="Book and Check In"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Billing">
+                            <content>
+                                <HBox alignment="TOP_LEFT" spacing="18.0">
+                                    <children>
+                                        <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <VBox spacing="12.0" styleClass="content-card" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Label styleClass="section-title" text="Generated Bills"/>
+                                                        <GridPane hgap="10.0" vgap="10.0">
+                                                            <children>
+                                                                <TextField fx:id="billSearchIdField" maxWidth="1.7976931348623157E308" promptText="Bill ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="billSearchBookingIdField" maxWidth="1.7976931348623157E308" promptText="Booking ID" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                                                                <TextField fx:id="billSearchPhoneField" maxWidth="1.7976931348623157E308" promptText="Phone number" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                                                                <ComboBox fx:id="billSearchPaidField" maxWidth="1.7976931348623157E308" promptText="Paid" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                                                <ComboBox fx:id="billSearchPaymentModeField" maxWidth="1.7976931348623157E308" promptText="Payment mode" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                                <Button onAction="#handleSearchBills" styleClass="primary-button" text="Apply Filters" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                                                <Button onAction="#handleClearBillSearch" text="Clear Filters" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                                                            </children>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="ALWAYS"/>
+                                                                <ColumnConstraints hgrow="ALWAYS"/>
+                                                                <ColumnConstraints hgrow="ALWAYS"/>
+                                                            </columnConstraints>
+                                                        </GridPane>
+                                                        <TableView fx:id="billTable" prefHeight="470.0" VBox.vgrow="ALWAYS">
+                                                            <columns>
+                                                                <TableColumn fx:id="billIdColumn" prefWidth="120.0" text="Bill ID"/>
+                                                                <TableColumn fx:id="billBookingIdColumn" prefWidth="120.0" text="Booking ID"/>
+                                                                <TableColumn fx:id="billGuestColumn" prefWidth="140.0" text="Guest"/>
+                                                                <TableColumn fx:id="billPhoneColumn" prefWidth="120.0" text="Phone"/>
+                                                                <TableColumn fx:id="billRoomColumn" prefWidth="80.0" text="Room"/>
+                                                                <TableColumn fx:id="billTotalColumn" prefWidth="120.0" text="Total"/>
+                                                                <TableColumn fx:id="billPaidColumn" prefWidth="80.0" text="Paid"/>
+                                                                <TableColumn fx:id="billPaymentModeColumn" prefWidth="120.0" text="Payment Mode"/>
+                                                            </columns>
+                                                        </TableView>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="TOP_LEFT" fillWidth="true" minWidth="300.0" prefWidth="320.0" spacing="12.0" styleClass="form-card">
+                                            <children>
+                                                <Label styleClass="section-title" text="Billing Actions"/>
+                                                <Label styleClass="muted-label" wrapText="true"
+                                                       text="Every booking creates a bill automatically with room charge, service charge, and tax."/>
+                                                <ComboBox fx:id="paymentModeField" maxWidth="1.7976931348623157E308" promptText="Select payment mode"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleMarkPaid" styleClass="primary-button" text="Mark Selected Bill Paid"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleShowSelectedBill" text="Preview Invoice"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Service Requests">
+                            <content>
+                                <HBox alignment="TOP_LEFT" spacing="18.0">
+                                    <children>
+                                        <VBox spacing="12.0" styleClass="content-card" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <HBox spacing="12.0">
+                                                    <children>
+                                                        <VBox spacing="4.0" styleClass="stat-card accent-amber">
+                                                            <children>
+                                                                <Label styleClass="muted-label" text="Maintenance Open"/>
+                                                                <Label fx:id="pendingMaintenanceLabel" styleClass="stat-value" text="0"/>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="4.0" styleClass="stat-card accent-blue">
+                                                            <children>
+                                                                <Label styleClass="muted-label" text="Food Delivery Open"/>
+                                                                <Label fx:id="pendingFoodLabel" styleClass="stat-value" text="0"/>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="4.0" styleClass="stat-card accent-green">
+                                                            <children>
+                                                                <Label styleClass="muted-label" text="Laundry Open"/>
+                                                                <Label fx:id="pendingLaundryLabel" styleClass="stat-value" text="0"/>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                                <Label styleClass="section-title" text="Request Queue and Progress"/>
+                                                <GridPane hgap="10.0" vgap="10.0">
+                                                    <children>
+                                                        <TextField fx:id="serviceSearchBookingIdField" maxWidth="1.7976931348623157E308" promptText="Booking ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                                        <TextField fx:id="serviceSearchRequestIdField" maxWidth="1.7976931348623157E308" promptText="Service ID" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                                                        <TextField fx:id="serviceSearchRoomField" maxWidth="1.7976931348623157E308" promptText="Room" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                                                        <ComboBox fx:id="serviceSearchTypeField" maxWidth="1.7976931348623157E308" promptText="Service" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                                        <ComboBox fx:id="serviceSearchStatusField" maxWidth="1.7976931348623157E308" promptText="Status" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                        <Button onAction="#handleSearchServiceRequests" styleClass="primary-button" text="Apply Filters" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                                        <Button onAction="#handleClearServiceRequestSearch" text="Clear Filters" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="ALWAYS"/>
+                                                        <ColumnConstraints hgrow="ALWAYS"/>
+                                                        <ColumnConstraints hgrow="ALWAYS"/>
+                                                    </columnConstraints>
+                                                </GridPane>
+                                                <TableView fx:id="serviceRequestTable" prefHeight="330.0" VBox.vgrow="ALWAYS">
+                                                    <columns>
+                                                        <TableColumn fx:id="serviceRequestIdColumn" prefWidth="120.0" text="Request ID"/>
+                                                        <TableColumn fx:id="serviceBookingIdColumn" prefWidth="120.0" text="Booking ID"/>
+                                                        <TableColumn fx:id="serviceRoomColumn" prefWidth="80.0" text="Room"/>
+                                                        <TableColumn fx:id="serviceGuestColumn" prefWidth="150.0" text="Guest"/>
+                                                        <TableColumn fx:id="serviceTypeColumn" prefWidth="140.0" text="Service"/>
+                                                        <TableColumn fx:id="serviceStatusColumn" prefWidth="110.0" text="Status"/>
+                                                        <TableColumn fx:id="serviceStageColumn" prefWidth="250.0" text="Current Stage"/>
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="TOP_LEFT" fillWidth="true" minWidth="320.0" prefWidth="360.0" spacing="12.0" styleClass="form-card">
+                                            <children>
+                                                <Label styleClass="section-title" text="Create Request"/>
+                                                <Label styleClass="muted-label" text="Choose a currently active booking and then create a service request from here." wrapText="true"/>
+                                                <ComboBox fx:id="serviceBookingField" maxWidth="1.7976931348623157E308" promptText="Select active booking"/>
+                                                <ComboBox fx:id="serviceTypeField" maxWidth="1.7976931348623157E308" promptText="Service type"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleRequestService" styleClass="primary-button" text="Create Request"/>
+                                                <Label styleClass="muted-label" text="Each service type can process up to 3 requests in parallel. Extra requests stay pending until a slot opens." wrapText="true"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Reports">
+                            <content>
+                                <HBox alignment="TOP_LEFT" spacing="18.0">
+                                    <children>
+                                        <VBox spacing="14.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <VBox spacing="10.0" styleClass="form-card">
+                                                    <children>
+                                                        <Label styleClass="section-title" text="Room Amenities"/>
+                                                        <ComboBox fx:id="amenitiesRoomTypeField" maxWidth="1.7976931348623157E308" onAction="#handleShowAmenities" promptText="Select room type"/>
+                                                        <TextArea fx:id="amenitiesOutputArea" editable="false" prefHeight="180.0" wrapText="true"/>
+                                                    </children>
+                                                </VBox>
+                                                <VBox spacing="10.0" styleClass="form-card">
+                                                    <children>
+                                                        <Label styleClass="section-title" text="Recent Activity"/>
+                                                        <TextArea fx:id="auditLogArea" editable="false" prefHeight="260.0" wrapText="true"/>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="TOP_LEFT" fillWidth="true" minWidth="320.0" prefWidth="360.0" spacing="12.0" styleClass="form-card">
+                                            <children>
+                                                <Label styleClass="section-title" text="Utilities"/>
+                                                <Label styleClass="muted-label" text="Create text reports, serialized backups, and review recent hotel activity." wrapText="true"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleExportReport" styleClass="primary-button" text="Export Hotel Report"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleCreateBackup" text="Create Serialized Backup"/>
+                                                <Button maxWidth="1.7976931348623157E308" onAction="#handleRefreshAuditLog" text="Refresh Audit Log"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

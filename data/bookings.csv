@@ -1,0 +1,5 @@
+"bookingId","guestName","phone","email","idProof","roomNumber","checkIn","checkOut","status","roomCharge","serviceCharge","notes"
+"BK-7BC39F8C","Praveen","2343244567","pk@gmail.com","3435-1256-3434","202","2026-04-08","2026-04-14","RESERVED","20400.0","200.0",""
+"BK-8ACD23D3","Praveen","9456396581","praveen@gmail.com","1234-5678-9567","201","2026-04-01","2026-04-02","CHECKED_IN","3400.0","500.0","Wants an extra comforter"
+"BK-DDF1ED50","Aditya","345896702","aditya@gmail.com","1678-2543-6789","221","2026-04-01","2026-04-15","CHECKED_OUT","30800.0","3000.0","Room Service every 4 days"
+"BK-88EB0D5D","Nihal B M","1232123456","nihal@gmail.com","4567-2345-7890","102","2026-04-01","2026-04-04","CHECKED_OUT","6600.0","300.0","Wants certain channels on TV"

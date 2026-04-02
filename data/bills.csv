@@ -1,0 +1,5 @@
+"billId","bookingId","guestName","roomNumber","roomCharge","serviceCharge","tax","totalAmount","paid","paymentMode"
+"BL-D7A217B7","BK-88EB0D5D","Nihal B M","102","6600.0","300.0","1242.0","8142.0","false","Pending"
+"BL-94661620","BK-7BC39F8C","Praveen","202","20400.0","200.0","3708.0","24308.0","false","Pending"
+"BL-7A6CDBDB","BK-DDF1ED50","Aditya","221","30800.0","3000.0","6084.0","39884.0","true","UPI"
+"BL-01E4A814","BK-8ACD23D3","Praveen","201","3400.0","500.0","702.0","4602.0","true","Cash"

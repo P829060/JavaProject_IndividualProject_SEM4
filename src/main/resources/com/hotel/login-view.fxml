@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1000.0" styleClass="login-root"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.hotel.controller.LoginController">
+    <children>
+        <HBox spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox alignment="CENTER_LEFT" prefWidth="580.0" spacing="18.0" styleClass="brand-panel">
+                    <padding>
+                        <Insets bottom="48.0" left="48.0" right="48.0" top="48.0"/>
+                    </padding>
+                    <children>
+                        <Label maxWidth="360.0" styleClass="hero-title" text="Hotel Management Application" wrapText="true"/>
+                        <Label styleClass="hero-copy" wrapText="true"
+                               text="Welcome to the Hotel Management Application, Please enter your login details"/>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefWidth="420.0" spacing="18.0" styleClass="login-card">
+                    <padding>
+                        <Insets bottom="34.0" left="34.0" right="34.0" top="34.0"/>
+                    </padding>
+                    <children>
+                        <Label styleClass="section-title" text="Sign In"/>
+                        <TextField fx:id="usernameField" promptText="Username"/>
+                        <PasswordField fx:id="passwordField" promptText="Password"/>
+                        <Button maxWidth="1.7976931348623157E308" onAction="#handleLogin" styleClass="primary-button" text="Open Dashboard"/>
+                        <Label fx:id="messageLabel" styleClass="error-label" wrapText="true"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
